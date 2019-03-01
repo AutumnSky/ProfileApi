@@ -2,7 +2,12 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const portfolioSchema = new Schema({
-  projectName: String,
+  projectName: {
+    type: {
+      ko: String,
+      en: String
+    }
+  },
   year: Number,
   role: [ String ],
   using: [ String ],
