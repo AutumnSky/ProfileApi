@@ -10,6 +10,8 @@
     "morgan": "^1.9.1"
   },
   "scripts": {
+    "build": "babel src --out-dir build",
+    "dev": "nodemon --exec babel-node src/app.js",
     "start": "nodemon --exec babel-node src/app.js"
   },
   "devDependencies": {
