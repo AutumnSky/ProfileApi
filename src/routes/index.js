@@ -1,5 +1,11 @@
-import portfolio from './portfolio.route';
+import * as controller from '../controllers';
 
 export default (app) => {
-  app.use('/portfolio', portfolio);
+  app.get('/portfolios', controller.getPortfolios);
+  app.get('/workportfolios', controller.getWorkPortfolios);
+  app.get('/personalprojects', controller.getPersonalProjects);
+
+  app.use('/', (req, res) => {
+    res.send('hello  😀');
+  });
 };

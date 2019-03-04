@@ -24,6 +24,6 @@ const schema = new Schema({
   screenshot: [ String ]
 });
 
-const model = mongoose.model('Portfolio', schema);
+const model = mongoose.model('WorkPortfolio', schema);
 
 export default model;
