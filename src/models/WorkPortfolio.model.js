@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const schema = new Schema({
+  company: String,
   projectName: {
     type: {
       ko: String,
