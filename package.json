@@ -15,7 +15,7 @@
     "prebuild": "rm -rf build",
     "build": "babel src --out-dir build",
     "dev": "nodemon --exec babel-node src/app.js",
-    "start": "forever start --uid 'profileapi' build/app.js"
+    "start": "forever start build/app.js"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
