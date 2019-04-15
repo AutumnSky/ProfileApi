@@ -30,6 +30,6 @@ db.once('open', () => {
 });
 
 // start
-app.listen(4000, () => {
-  console.log(`✅  server running on port http://localhost:4000`);
+app.listen(3000, () => {
+  console.log(`✅  server running on port http://localhost:3000`);
 });
