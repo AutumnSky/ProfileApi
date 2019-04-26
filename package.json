@@ -12,10 +12,12 @@
     "morgan": "^1.9.1"
   },
   "scripts": {
+    "dev": "nodemon --exec babel-node src/app.js",
+    "deploy": "./deploy.sh",
     "prebuild": "rm -rf build",
     "build": "babel src --out-dir build",
-    "dev": "nodemon --exec babel-node src/app.js",
-    "start": "forever start build/app.js"
+    "prestart": "yarn build",
+    "start": "NODE_PATH=build NODE_ENV=production pm2 start build/app.js --name profile-api"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
